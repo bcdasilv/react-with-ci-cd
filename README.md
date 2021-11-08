@@ -1,0 +1,1 @@
+This is an example on how to deploy an app in a subfolder using Heroku.
