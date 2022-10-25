@@ -7,7 +7,7 @@ function MyApp () {
   const [characters, setCharacters] = useState([]);
 
   // const API_BASE_URL = 'http://localhost:5000';
-  const API_BASE_URL = 'https://csc307-api.herokuapp.com';
+  const API_BASE_URL = 'https://peoplerecords.azurewebsites.net';
 
   useEffect(() => {
     fetchAll().then(result => {
@@ -45,7 +45,7 @@ function MyApp () {
 
   function updateList (person) {
     makePostCall(person).then(result => {
-      if (result && result.status === 200) { setCharacters([...characters, person]) }
+      if (result && result.status === 201) { setCharacters([...characters, person]) }
     })
   }
 
